@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Positioning Floats and Clears Practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .topBar {
+            width: 100%;
+            height: 75px;
+            background-color: grey;
+        }
+        .title {
+            font-size: 50px;
+            line-height: 75px;
+            color: white;
+            text-shadow: 2px 2px black;
+            margin-right: 15px;
+        }
+        .navBar {
+            height: 25px;
+            width: 100%;
+            background-color: lightgrey;
+        }
+        .navLink{
+            height: 100%;
+            width: 25%;
+            text-align: center;
+            font-size: 25px;
+        }
+        .current {
+            background-color: slategray;
+        }
+        .main{
+            height: 80%;
+            width: 100%;
+        }
+        .sideList {
+            width: 25%;
+            height: 450px;
+            background-color: darkgrey;
+        }
+        .articles {
+            width: 75%;
+            height: 100%;
+        }
+        article {
+            margin: auto;
+            width:100%;
+            height: 150px;
+            padding: 5px;
+        }
+        .artImage{
+            padding: 5px;
+            height: 100px;
+            width: 150px;
+        }
+        .artText{
+            padding: 5px;
+            margin: 5px;
+        }
+        .floatLeft{
+            float: left;
+        }
+        .floatRight{
+            float: right;
+        }
+        .clearLeft{
+            clear: left;
+        }
+        .clearRight{
+            clear: right;
+        }
+        .clearBoth{
+            clear: both;
+        }
+        ul{
+            text-align: center;
+            font-size: 24px;
+            margin: 10%;
+        }
+        li {
+            padding: 10px;
+            font-size: 18px;
+        }
+        .bottomBanner {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 0px;
+            background-color: pink;
+            position: relative;
+            text-align: center;
+        }
+        .bannerImage {
+            width: 98%;
+            height: 90%;
+            border: 2px solid black;
+        }
+        .bannerText {
+            font-size: 50px;
+            color: brown;
+            text-shadow: 2px 2px darkgrey;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container topBar">
+        <img class="floatLeft" src="http://www.sciencekids.co.nz/images/facts/animals/cat.jpg" style="width:100px;height:75px;">
+        <p class="floatRight title">CAT FACTS</p>
+    </div>
+    <div class="container navBar clearBoth">
+        <nav>
+            <a class="navLink floatLeft current" href="html.html">Cat Facts</a>
+            <a class="navLink floatLeft" href="html.html">Cat Snacks</a>
+            <a class="navLink floatLeft" href="html.html">Cat Tracks</a>
+            <a class="navLink floatLeft" href="html.html">Chili Cookoff</a>
+        </nav>
+    </div>
+    <div class="main clearBoth">
+        <div class="sideList floatLeft">
+            <ul> CAT FACTS
+                <li>Cats are one of, if not the most, popular pet in the world.</li>
+                <li>On average cats live for around 12 to 15 years.</li>
+                <li>Feral cats are often seen as pests and threats to native animals.</li>
+                <li>Cats spend a large amount of time licking their coats to keep them clean.</li>
+                <li>The heaviest domestic cat on record is 21.297 kilograms (46 lb 15.2 oz).</li>
+            </ul>
+        </div>
+        <div class="articles floatRight">
+            <article>
+                <img class="artImage floatLeft" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Ragdoll_from_Gatil_Ragbelas.jpg">
+                <p class="artText">The Ragdoll is a cat breed with a color point coat and blue eyes. They are large and muscular semi-longhair cat with a soft and silky coat. Developed by American breeder Ann Baker in the 1960s, they are best known for their docile and placid temperament and affectionate nature.</p> 
+            </article>
+            <article>
+                <img class="artImage floatLeft" src="https://www.thesprucepets.com/thmb/rYyafr2qDC0RlFbaNHojp_87vYI=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/cute-russian-blue-cat-sitting-on-the-bed--female-cat--498731394-5c2a695746e0fb00015354ac.jpg">
+                <p class="artText">The Russian Blue is a cat breed that comes in colors varying from a light shimmering silver to a darker, slate grey. They develop close bonds with their owners and are sought out as pets due to their personalities, beauty and coat.</p> 
+            </article>
+            <article>
+                <img class="artImage floatLeft" src="https://assets3.thrillist.com/v1/image/2622128/size/tmg-facebook_social.jpg">
+                <p class="artText">The Bengal cat is a domesticated cat breed created from hybrids of domestic cats, the Asian leopard cat and the Egyptian Mau, which gives them their golden shimmer – the breed name comes from the taxonomic name.</p> 
+            </article>
+        </div>
+    </div>
+    <div class="bottomBanner clearBoth">
+        <img class="bannerImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaRwjA7P0M0F4uHYQNCBywDdmJUNjuqhJJbYwbLx_-y134HKXw">
+        <div class="bannerText">MEOOOOOOOOOW</div>
+    </div>
+</body>
+</html>
